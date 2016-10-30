@@ -1,4 +1,5 @@
-= form_for(@user) do |f|
+- url = @user.new_record? ? webappsse_users_path : edit_webappsse_user_path
+= simple_form_for(@user, url: url) do |f|
   - if @user.errors.any?
     #error_explanation
       %h2
@@ -7,7 +8,9 @@
       %ul
         - @user.errors.full_messages.each do |message|
           %li= message
-  
+
+  = f.input :email
+  = f.input :password
 
   .actions
     = f.submit

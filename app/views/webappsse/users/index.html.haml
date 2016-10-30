@@ -1,0 +1,15 @@
+%p#notice= notice
+%h1 Listing Users
+%table.table.table-hover
+  %thead
+    %tr
+      %th{:colspan => "4"}
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= user.email
+        %td= link_to 'Show', webappsse_user_path(user)
+        %td= link_to 'Edit', edit_webappsse_user_path(user)
+        %td= link_to 'Destroy', webappsse_user_path(user), method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New User', new_webappsse_user_path, class: 'btn btn-primary'

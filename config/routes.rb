@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
   # index root
-  root 'users#index'
-
+  root 'webappsse/users#index'
   # resoruces
-  resources :users
-
+  namespace :webappsse do
+    resources :users
+  end
 
 end

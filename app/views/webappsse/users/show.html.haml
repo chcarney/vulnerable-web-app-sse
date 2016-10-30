@@ -1,0 +1,18 @@
+%p#notice= notice
+%table.table.table-hover
+  %thead
+    %tr
+      %td Email
+      %td Password
+      %td Password MD5
+      %td Password bycrypt
+  %tbody
+    %tr
+      %td= @user.email
+      %td= @user.password_plain
+      %td= @user.password_md5
+      %td= @user.password_digest
+
+= link_to 'Edit', edit_webappsse_user_path(@user)
+|
+= link_to 'Back', webappsse_users_path

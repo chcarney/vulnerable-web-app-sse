@@ -101,8 +101,13 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.9.1)
     multi_json (1.12.1)
+    network_interface (0.0.1)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
+    packetfu (1.1.11)
+      network_interface (~> 0.0)
+      pcaprub (~> 0.12)
+    pcaprub (0.12.4)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -158,6 +163,9 @@ GEM
     shoulda-context (1.2.1)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
+    simple_form (3.3.1)
+      actionpack (> 4, < 5.1)
+      activemodel (> 4, < 5.1)
     slop (3.6.0)
     spring (2.0.0)
       activesupport (>= 4.2)
@@ -200,12 +208,14 @@ DEPENDENCIES
   haml-rails (~> 0.9)
   jbuilder (~> 2.0)
   jquery-rails
+  packetfu
   pry
   rails (= 4.2.6)
   rails_layout
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   shoulda
+  simple_form
   spring
   sqlite3
   turbolinks
