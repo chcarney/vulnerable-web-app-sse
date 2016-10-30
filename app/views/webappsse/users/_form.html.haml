@@ -1,4 +1,4 @@
-- url = @user.new_record? ? webappsse_users_path : edit_webappsse_user_path
+- url = @user.new_record? ? webappsse_users_path : webappsse_user_path
 = simple_form_for(@user, url: url) do |f|
   - if @user.errors.any?
     #error_explanation
@@ -10,7 +10,8 @@
           %li= message
 
   = f.input :email
+  = f.input :password, as: 'string', label: 'Insecure password'
   = f.input :password
 
   .actions
-    = f.submit
+    = f.submit class: 'btn btn-primary'
